@@ -33,10 +33,18 @@ Release/
 *.cu.c
 *.fatbin.c
 
-# MuJoCo model data
+# MuJoCo 
+mujoco/lib/*
+!mujoco/lib/mujoco.lib
 *.mjb
 *.mjkey
 *.d
+*.dll
+*.lib
+*.so
+*.dylib
+*.pdb
+*.exe
 
 # CMake
 CMakeFiles/
@@ -58,3 +66,5 @@ desktop.ini
 *.tmp
 *.swp
 *~
+mjkey.txt
+mujoco
