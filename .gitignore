@@ -1,6 +1,60 @@
-*.i
-*.ii
-*.gpu
-*.ptx
+# Build folders
+[Bb]uild*/
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.tlog
+*.log
+*.pch
+
+# Visual Studio files
+.vs/
+*.VC.db
+*.VC.VC.opendb
+*.user
+*.suo
+*.sdf
+*.cache
+*.sln.docstates
+
+# CUDA
 *.cubin
-*.fatbin
+*.ptx
+*.cu.c
+*.fatbin.c
+
+# MuJoCo model data
+*.mjb
+*.mjkey
+*.d
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / crash dumps
+*.log
+*.dmp
+
+# Backup or temp files
+*.bak
+*.tmp
+*.swp
+*~
