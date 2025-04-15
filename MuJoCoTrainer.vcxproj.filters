@@ -4,21 +4,18 @@
     <ClCompile Include="src\controller.cpp" />
     <ClCompile Include="src\evolution.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\simulation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\controller.hpp" />
     <ClInclude Include="include\evolution.hpp" />
-    <ClInclude Include="include\utils.hpp" />
+    <ClInclude Include="include\config.hpp" />
+    <ClInclude Include="include\simulation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="mujoco_models\humanoid.xml" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <CudaCompile Include="src\kernel.cu" />
-    <CudaCompile Include="include\kernel.cuh" />
   </ItemGroup>
 </Project>

@@ -18,22 +18,19 @@
     <ClCompile Include="src\controller.cpp" />
     <ClCompile Include="src\evolution.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\simulation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\config.hpp" />
     <ClInclude Include="include\controller.hpp" />
     <ClInclude Include="include\evolution.hpp" />
-    <CudaCompile Include="include\kernel.cuh" />
-    <ClInclude Include="include\utils.hpp" />
+    <ClInclude Include="include\simulation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="mujoco_models\humanoid.xml" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <CudaCompile Include="src\kernel.cu" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A1D23A82-FC8A-4462-B89E-880CA30F2E4A}</ProjectGuid>
@@ -74,6 +71,7 @@
       <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)mujoco\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

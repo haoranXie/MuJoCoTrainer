@@ -5,7 +5,10 @@
 class Controller {
 public:
     Controller(int num_joints);
-    void apply(mjModel* m, mjData* d, const std::vector<float>& genome);
+    // Applies the genome directly as control signals
+    void apply(mjData* d, const std::vector<float>& genome);
+    // Can be extended later for more complex controllers (e.g., neural networks)
+    // virtual void apply(mjModel* m, mjData* d, const std::vector<float>& genome) = 0;
 
 private:
     int joint_count;

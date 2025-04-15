@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Enable CUDA
 enable_language(CUDA)
+set(SOURCES src/kernel.cu)
 
 # Include MuJoCo and other dependencies
 set(MUJOCO_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/mujoco/include")
