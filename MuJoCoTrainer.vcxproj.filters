@@ -1,15 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
+    <ClCompile Include="src\controller.cpp" />
+    <ClCompile Include="src\evolution.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="controller.cpp" />
-    <ClCompile Include="evolution.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="utils.cpp" />
+    <ClInclude Include="include\controller.hpp" />
+    <ClInclude Include="include\evolution.hpp" />
+    <ClInclude Include="include\utils.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="controller.hpp" />
+    <Xml Include="mujoco_models\humanoid.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\kernel.cu" />
+    <CudaCompile Include="include\kernel.cuh" />
   </ItemGroup>
 </Project>

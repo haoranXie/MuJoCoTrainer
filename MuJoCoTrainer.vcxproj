@@ -10,6 +10,31 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMakeLists.txt" />
+    <Content Include="mujoco_models\humanoid.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\controller.cpp" />
+    <ClCompile Include="src\evolution.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\controller.hpp" />
+    <ClInclude Include="include\evolution.hpp" />
+    <CudaCompile Include="include\kernel.cuh" />
+    <ClInclude Include="include\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="mujoco_models\humanoid.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="src\kernel.cu" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A1D23A82-FC8A-4462-B89E-880CA30F2E4A}</ProjectGuid>
     <RootNamespace>MuJoCoTrainer</RootNamespace>
@@ -47,7 +72,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)mujoco\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)mujoco\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -79,18 +104,6 @@
       <TargetMachinePlatform>64</TargetMachinePlatform>
     </CudaCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="controller.cpp" />
-    <ClCompile Include="evolution.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="utils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="controller.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.8.targets" />

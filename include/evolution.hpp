@@ -9,12 +9,12 @@ struct Genome {
 class Evolution {
 public:
     Evolution(int population_size, int genome_length);
-    void evaluate_all(); // calls CUDA
-    void evolve();
-    const std::vector<Genome>& get_population() const;
+    ~Evolution();
+    std::vector<float> optimize();
 
 private:
     int pop_size;
     int gene_len;
-    std::vector<Genome> population;
+    float* d_genomes;
+    float* d_fitnesses;
 };
