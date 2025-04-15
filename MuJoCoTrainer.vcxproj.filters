@@ -4,9 +4,12 @@
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="controller.cpp" />
     <ClCompile Include="evolution.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="controller.hpp" />
   </ItemGroup>
 </Project>
